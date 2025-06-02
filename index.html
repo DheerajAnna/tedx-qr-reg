@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>TEDx ID Lookup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,16 +15,18 @@
       height: 100vh;
       background: linear-gradient(135deg, #111, #900C3F);
       color: white;
+      padding: 1em;
+      box-sizing: border-box;
     }
 
     .card {
       background: #1f1f1f;
-      padding: 3em 2em;
+      padding: 2.5em 1.5em;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
       text-align: center;
-      width: 90%;
-      max-width: 400px;
+      width: 100%;
+      max-width: 500px;
       transition: transform 0.3s ease;
     }
 
@@ -33,23 +36,23 @@
 
     h1 {
       font-weight: 600;
-      font-size: 1.8em;
-      margin-bottom: 0.5em;
+      font-size: clamp(1.5em, 5vw, 2em);
+      margin-bottom: 0.6em;
       color: #FF4C4C;
     }
 
     p {
-      font-size: 1.1em;
+      font-size: clamp(1em, 4vw, 1.2em);
       color: #ddd;
       margin-bottom: 1em;
     }
 
     .id {
-      font-size: 1.5em;
+      font-size: clamp(1.3em, 5vw, 1.8em);
       color: #FF4C4C;
       background: rgba(255, 255, 255, 0.1);
-      padding: 0.5em 1em;
-      border-radius: 8px;
+      padding: 0.6em 1.2em;
+      border-radius: 10px;
       display: inline-block;
       margin-top: 0.5em;
     }
