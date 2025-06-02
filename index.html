@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TEDx ID Lookup</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 5em; }
+    .id { font-size: 2em; color: crimson; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to TEDx!</h1>
+  <p>Your Unique ID is:</p>
+  <div class="id" id="idDisplay"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    if (id) {
+      document.getElementById('idDisplay').textContent = id;
+    } else {
+      document.getElementById('idDisplay').textContent = 'Invalid or missing ID.';
+    }
+  </script>
+</body>
+</html>
